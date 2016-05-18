@@ -9,17 +9,19 @@ extra-source-files:
 
 library
   exposed-modules:
-    Globber
+                  Globber
   build-depends:
-    base < 5
+                base < 5,
+                unordered-containers
   ghc-options: -Wall
 
 test-suite test-globber
   type: exitcode-stdio-1.0
   main-is: TestGlobber.hs
   build-depends:
-    base < 5,
-    globber,
-    hspec
+                base < 5,
+                globber,
+                hspec,
+                unordered-containers
   ghc-options: -Wall
 
